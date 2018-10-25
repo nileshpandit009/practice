@@ -37,13 +37,14 @@ int main(void)
     char* id;
     id = (char*)malloc(30 * sizeof(char));
 
-    while (fgets(line, sizeof(line), src_file) != NULL) {
-        strcpy(id, line);
-        id = strtok(id, " ");
-        int id_no = atoi(id);
-        printf("%d\n", id_no);
-        fprintf(disks[id_no % no_of_disk], line);
-    }
+    /* 
+     * Clone the repo:
+     * https://github.com/nileshpandit009/practice.git
+     * 
+     * Enter the range partition code here
+     * and then git commit to the repo.
+     *  
+     */
 
     return 0;
 }
