@@ -1,0 +1,38 @@
+Name : Nilesh Pandit
+Roll No: A-22
+Expt no. 13.2
+(iii)	Write a Java program to compare two sets and retain elements
+which are same on both sets.
+
+
+import java.util.HashSet;
+class HashS
+{
+  public static void main(String args[])
+  {
+    HashS hs=new HashS();
+    HashS hs1=new HashS();
+    hs.add("monday");
+    hs.add("sunday");
+    hs.add("monday");
+    hs1.add("friday");
+    System.out.println("first list");
+    System.out.println(hs);
+    System.out.println("second list");
+    System.out.println(hs1);
+    hs.retainAll(hs1);
+    System.out.println("same element in two sets");
+    System.out.println(hs);
+    
+  } 
+}
+
+output:
+C:\User\Arise\Dekstop>javac HashS.java
+C:\User\Arise\Dekstop>javac HashS
+first list
+[sunday,monday]
+second list
+[friday,monday]
+same element in two sets
+[monday]

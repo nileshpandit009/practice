@@ -1,0 +1,22 @@
+date
+who
+head
+tail
+clear
+pwd
+ls -a -l -x -c -p -r -f -i -s -t
+cd
+mkdir
+rm
+rmdir
+cp
+mv
+echo
+man
+wc -w -l -c
+sort
+join
+ps
+kill
+df
+cat

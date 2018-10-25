@@ -1,0 +1,53 @@
+Name : Nilesh Pandit
+Roll No: A-22
+Expt no. 12.1
+(ii) Write a Java program to compare two files lexicographically
+
+import java.io.*;
+public class Seq
+ {
+	public static void main(String[] args)throws IOException
+	{
+           
+		FileReader fr1=new FileReader(" abc.txt");
+		FileReader fr2=new FileReader("xyz.txt");
+		BufferedReader br1=new BufferedReader(fr1);
+		BufferedReader br2=new BufferedReader(fr2);
+		boolean tf=true;
+		int count=1;
+		java.lang.String line1=br1.readLine();
+		 java.lang. String line2=br2.readLine();
+		while(line1!=null || line2!=null)
+		{
+			if(line1==null||line2==null)
+			{
+				tf=false;
+				break;
+			}
+			else
+			{
+				if(!line1.equalsIgnoreCase(line2))
+				{
+					tf=false;
+					break;
+				}
+			line1=br1.readLine();
+			line2=br2.readLine();
+			count++;
+			
+			}
+		}
+		if(tf)
+		{
+			System.out.println("both files have same contents");
+		}
+		else
+		{
+			System.out.println("both files are different");
+		}
+            }
+     }
+output:
+C:\Documents and Settings>javac Seq.java
+C:\Documents and Settings>java Seq
+both files are different

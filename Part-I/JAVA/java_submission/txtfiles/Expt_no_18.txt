@@ -1,0 +1,155 @@
+Name:Nilesh pandit
+Class:TE-A-22
+Expt.no.:18(a&b)	
+(i)Calculate Square,Square root,Cube,Cuberoot of given number.*/
+import java.awt.*;
+import java.applet.*;
+import java.awt.event.*;
+/*
+ * <Applet code="AppletDemo" width=500 height=500>
+ */
+public class AppletDemo extends Applet implements ActionListener{
+		Button b1,b2,b3,b4;
+		TextField t1;
+		Label l1;
+		Math m1;
+		
+		public void init()
+		{	setLayout(null);
+			t1=new TextField();
+			t1.setBounds(100,50,80,50);
+			add(t1);
+			b1=new Button("Squre");
+			b1.setBounds(100, 150, 80, 50);
+			b1.addActionListener(this);
+			add(b1);
+			b2=new Button("Squre Root");
+			b2.setBounds(200, 150, 80, 50);
+			b2.addActionListener(this);
+			add(b2);
+			b3=new Button("Qube");
+			b3.setBounds(300, 150, 80, 50);
+			b3.addActionListener(this);
+			add(b3);
+			b4=new Button("Qube root");
+			b4.setBounds(400, 150, 80, 50);
+			b4.addActionListener(this);
+			add(b4);
+			l1=new Label();
+			l1.setBounds(200, 50, 150, 50);
+			add(l1);
+		}
+			public void actionPerformed(ActionEvent ae)
+			{
+			if(ae.getSource()==b1)
+			{	try
+				{	String s=t1.getText();
+					int x=Integer.parseInt(s);
+					l1.setText("Squre:"+(x*x));
+				}
+				catch(NumberFormatException e)
+				{	l1.setText("Invalid no.");	}
+			}
+			if(ae.getSource()==b2)
+			{	try
+				{	String s=t1.getText();
+					int x=Integer.parseInt(s);
+					l1.setText("Squre root:"+m1.sqrt(x));
+				}
+				catch(NumberFormatException e)
+				{	l1.setText("Invalid no.");	}
+			}
+			if(ae.getSource()==b3)
+			{
+					try
+					{	String s=t1.getText();
+						int x=Integer.parseInt(s);
+						l1.setText("qube:"+(x*x*x));
+					}
+					catch(NumberFormatException e)
+					{	l1.setText("Invalid no.");	}		
+			}
+			if(ae.getSource()==b4)
+			{
+				try
+				{
+					String s=t1.getText();
+					int x=Integer.parseInt(s);
+					l1.setText(" qube root:"+m1.cbrt(x));
+				}
+				catch(NumberFormatException e)
+				{
+					l1.setText("Invalid no.");
+				}
+			}
+			
+			}
+		}
+	Output:-
+                             		
+
+		
+	
+
+                           
+
+
+
+                         
+                                       
+                                       
+                                       
+                                       
+     /*(ii)Change color of Rectangle when we select color from checkbox*/
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+/*
+<applet code="App12" width="300" height="300"></applet>
+*/
+public class App12 extends Applet implements ItemListener
+{
+Checkbox c1,c2,c3;
+CheckboxGroup cg;
+public void init()
+{
+setLayout(null);
+
+c1=new Checkbox ("Red",true,cg);
+c1.setBounds(50,50,100,20);
+add(c1);
+c1.addItemListener(this);
+
+c2=new Checkbox ("Green",false,cg);
+c2.setBounds(50,100,100,20);
+add(c2);
+c2.addItemListener(this);
+
+
+c3=new Checkbox ("Blue",false,cg);
+c3.setBounds(50,150,100,20);
+add(c3);
+c3.addItemListener(this);
+}
+
+public void paint(Graphics gr)
+{
+int r=0,b=0,g=0;
+if(c1.getState()) r=255;
+if(c2.getState()) g=255;
+if(c3.getState()) b=255;
+
+gr.setColor(new Color(r,g,b));
+gr.fillRect(200,50,100,100);
+}
+public void itemStateChanged(ItemEvent ie)
+{
+if(ie.getSource()==c1||ie.getSource()==c2||ie.getSource()==c3)
+{
+repaint();
+}
+}
+}
+OUTPUT:-
+
+

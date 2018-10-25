@@ -1,0 +1,89 @@
+Name:Nilesh Pandit
+Roll No: A-22
+(i)Implementation of 10 String Functions and 10 String Buffer Functions
+
+import java.util.*;
+public class StringFun {
+   public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s1="NKOCET";
+		String s2="ABC";
+		int ch;
+		do
+		{
+			System.out.println("1:Stringfunctions\n2:String buffer functions\n");
+			
+			System.out.println("Enter your choice:");
+			ch=sc.nextInt();
+			
+		
+		switch(ch)
+		{
+		case 1:int a=s1.length();
+		System.out.println("String length="+a);
+		 int b=s2.indexOf(65);
+		System.out.println("index of 65 is="+b);
+		System.out.println(s1.replace('N','n'));
+		
+		String c=s1.concat(s2);
+System.out.println("Concated string is:"+c);
+
+		char d=s1.charAt(1);
+System.out.println("Character at 1st location:"+d);
+		boolean e=s1.equals(s2);
+System.out.println(""+e);
+
+String f=s1.substring(0,4);
+System.out.println("Substring is:"+f);
+break;
+		case 2:
+			
+			StringBuffer str=new StringBuffer("Orchid");
+			str.append("College");
+			System.out.println("Appended string="+str);
+			char q=str.charAt(0);
+			System.out.println("Char at 0 is:"+q);
+			
+			str.lastIndexOf("Orchid");
+			System.out.println("Last index is:"+str);
+			str.reverse();
+			System.out.println("Reversed string is:"+str);
+		
+			str.delete(1,3);
+			System.out.println("String after deletion:"+str);
+	break;
+	
+			
+			
+
+		}
+
+		}while(ch!=2);
+
+}
+
+}
+output:
+
+1:Stringfunctions
+2:String buffer functions
+
+Enter your choice:
+1
+String length=6
+index of 65 is=0
+nKOCET
+Concated string is:NKOCETABC
+Character at 1st location:K
+false
+Substring is:NKOC
+1:Stringfunctions
+2:String buffer functions
+
+Enter your choice:
+2
+Appended string=OrchidCollege
+Char at 0 is:O
+Last index is:OrchidCollege
+Reversed string is:egelloCdihcrO
+String after deletion:elloCdihcrO

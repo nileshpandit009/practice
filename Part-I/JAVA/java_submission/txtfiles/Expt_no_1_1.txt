@@ -1,0 +1,34 @@
+/*Name :Nilesh Pandit
+   Roll No.:A-22
+   Expt_Name: add,sub,mul,div of any no. of parameters
+  Expt_No.:1.1
+*/
+class Arithmetic{
+public static void main(String args[]){
+int add=0,sub=0,mul=0,i;
+float div=0;
+for(i=0;i<1;i++)
+ {
+    add=Integer.parseInt(args[i]);
+    sub=Integer.parseInt(args[i]);    
+    mul=Integer.parseInt(args[i]);    
+    div=Integer.parseInt(args[i]);
+ }
+for(i=1;i<args.length;i++)
+{
+   add=add+Integer.parseInt(args[i]);
+   sub=sub-Integer.parseInt(args[i]);   
+   mul=mul*Integer.parseInt(args[i]);
+   div=div/Integer.parseInt(args[i]);   
+}
+System.out.println("\naddition:"+add);
+System.out.println("\nSubtraction:"+sub);
+System.out.println("\nmultiplication:"+mul);
+System.out.println("\ndivision:"+div);
+}
+}
+C:\Users\Nilesh\Desktop\java_pgm>java Arithmetic 10 20
+addition:30
+Subtraction:-10
+multiplication:200
+division:0.5

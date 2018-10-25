@@ -1,0 +1,67 @@
+Name:Nilesh Pandit
+Class:TE-A-22
+Expt.No.:16
+
+import java.sql.*;
+public class StudInfo {
+
+	
+	public static void main(String[] args) {
+	
+		try{
+		
+			String url="jdbc:odbc:Myinfo";
+			
+			Connection c=DriverManager.getConnection(url);
+			
+		
+				Statement st=c.createStatement();
+			int i=st.executeUpdate("delete from Stud_info where ID=5");
+			st.executeUpdate("insert into Stud_info values(5,'yassh',1)");
+			ResultSet rs=st.executeQuery("select * from Stud_info");
+			
+			while(rs.next()){
+				System.out.println(rs.getString(1)+" "+rs.getString(2)+" "+rs.getString(3));
+			}
+			
+		}catch(Exception e){
+				System.out.println(e+"statement");
+			}
+		
+	}
+
+
+}
+Output:
+                                   Stud_info
+                                      ID
+                                     Name
+                                    ROll NO
+                                      DOB
+                                   MObile NO
+                                                                              1
+Shreyas
+                                                                             29
+                                                                       5/9/1997
+                                                                     2938472938
+                                                                              2
+Karthik
+                                                                             33
+                                                                       9/5/2000
+                                                                     7932874837
+                                                                              3
+Nilesh
+                                                                             22
+                                                                      12/4/1997
+                                                                     3492789274
+                                                                              4
+Vaibhav
+                                                                             31
+                                                                     11/10/1995
+                                                                     7934875398
+                                                                              5
+Bhavin
+                                                                             16
+                                                                     10/21/1996
+                                                                     8478570340
+
