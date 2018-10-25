@@ -1,0 +1,67 @@
+
+/*
+Name: Nilesh Pandit
+Roll No.:A-22
+Expt_Name:Nested Inner Class and its types
+Expt_no.:4  
+*/
+ 
+
+abstract class Anonymes{
+   abstract void anonym();
+ }
+
+
+
+
+public  class College {
+	
+private static int b=50;
+  public static class Department{
+	  
+	  void str()
+	  {	  
+	  
+	   class member
+	   {
+		   void message()
+		   {
+			   System.out.println("\n This is a member inner class ");
+			   
+		   }
+		   
+	   }
+		
+	  String a="\n This is local inner class";
+	  System.out.println("\n"+a);
+	  member m=new member();
+	   m.message();		
+	  System.out.println("\nStatic Inner Class : integer a="+b);
+	 }
+  
+  }
+ 	
+	public static void main(String[] args) {
+		College.Department cg=new College.Department();
+		cg.str();
+            Anonymes an=new Anonymes(){
+        	  void anonym(){
+        		  System.out.println("\n This is anonymes class ");
+        	  }
+          };
+         an.anonym(); 
+	}
+
+}
+
+Output:
+
+
+ This is local inner class
+
+ This is a member inner class 
+
+ Static Inner Class : integer a=50
+
+ This is anonymes class 
+

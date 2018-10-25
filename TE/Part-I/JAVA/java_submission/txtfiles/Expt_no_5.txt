@@ -1,0 +1,50 @@
+/*Name : Nilesh Pandit
+Roll No.: TE A-22
+expt. no. 5
+*/
+public class Overload{
+   Overload()
+   {
+                  System.out.println("\n This is default constructor \n");
+   }
+ Overload(String name)
+   {
+	   System.out.println("\n Student Name:"+name);
+   }
+   Overload(String name,int roll)
+   {
+	   System.out.println("\n Student name :"+name+"  Roll no.:"+roll);
+   }
+   public void class1()
+   { 
+	   System.out.println("\n This is a class with 0 parameters");
+   }
+   public void class1(String name)
+	{
+	      System.out.println("Studnt NAME : "+name);
+	}	
+	public void class1(String name,int roll){
+	       System.out.println("Student NAME :" +name+"  Roll No.:"+roll );
+	}	
+	public static void main(String[] args) {
+	    Overload obj1 =new Overload();
+	    Overload obj2=new Overload("Shreyas");
+                  Overload obj3=new Overload("Shreyas",32);	    
+        obj1.class1();
+        obj1.class1("karthik");
+        obj1.class1("karthik",33);	   	
+	}
+}
+Output:
+ This is default constructor 
+
+ Student Name:  xyz
+
+ Student name : xyz  Roll no.:36
+
+ This is a class with 0 parameters
+
+ Studnt NAME : pqr
+
+ Student NAME :pqr  Roll No.:33
+

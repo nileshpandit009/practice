@@ -1,0 +1,72 @@
+Name : Nilesh Pandit
+class:TE-A-22
+expt.no.:17
+
+import java.rmi.*;
+public interface Adder extends Remote{
+public int add(int x,int y)throws RemoteException;
+public int sub(int x,int y)throws RemoteException;
+public int mul(int x,int y)throws RemoteException;
+public int div(int x,int y)throws RemoteException;
+}
+
+//AdderRemote class
+import java.rmi.*;
+import java.rmi.server.*;
+public class AdderRemote extends UnicastRemoteObject implements Adder{
+AdderRemote()throws RemoteException{
+super();
+}
+public int add(int x,int y){return x+y;}
+public int sub(int x,int y){return x-y;}
+public int mul(int x,int y){return x*y;}
+public int div(int x,int y){return x/y;}
+}
+
+//Myclient class
+import java.rmi.*;
+public class MyClient{
+public static void main(String args[]){
+try{
+Adder stub=(Adder)Naming.lookup("rmi://localhost:5000/sonoo");
+System.out.println(stub.add(34,4));
+System.out.println(stub.sub(16,3));
+System.out.println(stub.mul(6,3));
+System.out.println(stub.div(8,2));
+}catch(Exception e){System.out.println(e);}
+}
+}
+
+//Myserver class
+import java.rmi.*;
+import java.rmi.registry.*;
+public class MyServer{
+public static void main(String args[]){
+try{
+Adder stub=new AdderRemote();
+Naming.rebind("rmi://localhost:5000/sonoo",stub);
+}catch(Exception e){System.out.println(e);}
+}
+}
+
+output:
+
+C:\users\student\desktop\cd RMI
+C:\users\student\desktop\RMI>javac *.java
+C:\users\student\desktop\RMI>rmic AdderRemote
+warning:generation and use of skeletons and static stub for 
+JRMP is deprecated.Skeletons are unnecessary, and static stubs have
+been superseded by dynamically generated stubs.users are encouraged to migrate
+away from using rmic to generate skeletons and static
+stubs. See the documentation for java.rmi.server.UnicastRemoteObject.
+C:\users\student\desktop\RMI>rmiregistry 5000
+
+C:\users\student\desktop\RMI>javac
+C:\users\student\desktop\RMI>java MyServer
+
+C:\users\student\desktop\cd RMI
+C:\users\student\desktop\RMI>java MyClient
+38
+3
+18
+2

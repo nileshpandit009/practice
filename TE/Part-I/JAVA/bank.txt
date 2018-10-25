@@ -1,0 +1,3 @@
+create class bank account
+use member functions withdrawl, desposit, display.
+Display info of 5 customers.

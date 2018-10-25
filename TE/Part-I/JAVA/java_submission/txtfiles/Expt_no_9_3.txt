@@ -1,0 +1,30 @@
+Name : Nilesh Pandit
+Roll No: A-22
+Expt no. 9.3
+
+import java.util.*;
+public class PalTest {
+	public static void main(String[] args) {
+		String Original,reverse="";
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter a string to check if it is palindrome: ");
+		Original=s.nextLine();
+		int length=Original.length();
+		for(int i=length-1;i>=0;i--)
+		reverse=reverse+Original.charAt(i);	
+	    if(Original.equals(reverse))
+	    System.out.println("Enter the string is palindrome");
+	    else
+	    System.out.println("Enter the string is not palindrome");	
+
+	}
+
+}
+
+
+
+/*output:
+
+Enter a string to check if it is palindrome: 
+mom  
+Enter the string is palindrome */

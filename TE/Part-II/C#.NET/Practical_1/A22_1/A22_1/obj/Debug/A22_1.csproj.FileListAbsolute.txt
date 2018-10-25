@@ -1,0 +1,5 @@
+C:\Users\TEMP.WINDOWS-3TOER1D.000\Documents\Visual Studio 2008\Projects\A22_1\A22_1\bin\Debug\A22_1.exe
+C:\Users\TEMP.WINDOWS-3TOER1D.000\Documents\Visual Studio 2008\Projects\A22_1\A22_1\bin\Debug\A22_1.pdb
+C:\Users\TEMP.WINDOWS-3TOER1D.000\Documents\Visual Studio 2008\Projects\A22_1\A22_1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\TEMP.WINDOWS-3TOER1D.000\Documents\Visual Studio 2008\Projects\A22_1\A22_1\obj\Debug\A22_1.exe
+C:\Users\TEMP.WINDOWS-3TOER1D.000\Documents\Visual Studio 2008\Projects\A22_1\A22_1\obj\Debug\A22_1.pdb

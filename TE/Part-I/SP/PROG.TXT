@@ -1,0 +1,12 @@
+#define pf printf
+#define sf scanf
+#define pi 3.142
+void main()
+{
+int rad;
+float area;
+pf ("Enter radius");
+sf ("%d",&rad);
+area = pi * rad * rad;
+pf ("Area=%d",area);
+}

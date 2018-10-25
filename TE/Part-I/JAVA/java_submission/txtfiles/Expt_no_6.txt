@@ -1,0 +1,155 @@
+/*Name : Nilesh Pandit
+  Roll No.:A-22
+  Expt_No.:6
+  Expt_Name:Heirarchical Inheritance
+*/
+import java.util.Scanner;
+
+
+abstract class shape
+	 {
+	   int area;
+	   public static Scanner sc=new Scanner(System.in);
+	   abstract  void area();
+	 }
+ 
+class Square extends shape
+ {
+   int x=0;
+   public void getdata()
+   {
+       System.out.println("\n 1.Square:\t");
+	 System.out.println("\n Enter length of a side \n");
+	 x=sc.nextInt(); 
+   }
+	
+      void area() {
+		getdata();
+		area=x*x;	
+		System.out.println("\n Area of square is:"+area);
+	}
+	 
+ }
+
+class Triangle extends shape
+{
+   int b,h;
+    void getdata()
+    {    System.out.println("\n 2.Triangle:\t");
+    	System.out.println("\n enter base\n");
+    	b=sc.nextInt();
+    	System.out.println("\n Enter Height\n");
+    	h=sc.nextInt();
+    	
+    }
+	void area() {
+		getdata();
+		area=(b*h)/2;
+		System.out.println("\n Area of Triangle is:"+area);
+	}
+	 
+}
+
+class Rectangle extends shape
+{
+  int l,b;
+	void getdata()
+	{
+	    System.out.println("\n 3.Rectangle:\t");	
+	  System.out.println("\n enter Length\n");
+	  l=sc.nextInt();
+	  System.out.println("\n enter Breadth \n");
+	  b=sc.nextInt();		
+	}
+	void area() {
+		getdata();
+		area=l*b;
+		System.out.println("\n Area of Rectangle is:"+area);
+	}
+	
+	
+}
+
+class Circle extends shape
+{
+
+	 int r;
+	double area;
+		void getdata()
+		{
+		    System.out.println("\n 4.Rectangle:\t");
+			System.out.println("\n Circle:\t");
+			System.out.println("\n enter Radius\n");
+		  r=sc.nextInt();
+		  		
+		}
+		void area() {
+			getdata();
+			area=3.1415*r*r;
+			System.out.println("\n Area of Rectangle is:"+area);
+		}
+}
+
+public class Hdemo36 {
+
+	  		       
+	 public static void main(String[] args) 
+         {
+	   	Square sq=new Square();
+	   	sq.area();
+        	Triangle tl=new Triangle();
+        	tl.area();
+        	Rectangle tr=new Rectangle();
+        	tr.area();
+        	Circle c1=new Circle();
+        	c1.area();
+        
+        
+	   }
+
+  }
+
+
+Output:
+1.Square:	
+
+ Enter length of a side 
+
+2
+
+ Area of square is:4
+
+ 2.Triangle:	
+
+ enter base
+
+2
+
+ Enter Height
+
+3
+
+ Area of Triangle is:3
+
+ 3.Rectangle:	
+
+ enter Length
+
+3
+
+ enter Breadth 
+
+4
+
+ Area of Rectangle is:12
+
+ 4.Rectangle:	
+
+ Circle:	
+
+ enter Radius
+
+4
+
+ Area of Rectangle is:50.264
+
