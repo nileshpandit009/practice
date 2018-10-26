@@ -35,13 +35,15 @@ int main(void)
     char line[30];
 
     while (fgets(line, sizeof(line), src_file) != NULL) {
-        printf("\nPartitioning completed successfully\n");
+        // printf("%s", line);
         fprintf(disks[disk_num], line);
         if (disk_num < no_of_disk-1)
             disk_num++;
         else
             disk_num = 0;
     }
+
+    printf("\nPartitioning completed successfully\n");
 
     return 0;
 }
