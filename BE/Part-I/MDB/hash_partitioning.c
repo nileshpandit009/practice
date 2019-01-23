@@ -41,9 +41,11 @@ int main(void)
         strcpy(id, line);
         id = strtok(id, " ");
         int id_no = atoi(id);
-        printf("%d\n", id_no);
+        // printf("%d\n", id_no);
         fprintf(disks[id_no % no_of_disk], line);
     }
+
+    printf("\nPartitioning completed successfully\n");
 
     return 0;
 }
